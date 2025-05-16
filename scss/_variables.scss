@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* --- Colors --- */
+
+$primary-color: #2dc56a;
+$secundary-color: #255f38;
+$dark-color: #18230f;
+$light-color: #efefef;
+$grey-color: #e9efec;
+
+/* --- Fonts --- */
+
+@mixin title-xxl {
+    font-size: 3em;
+    color: $primary-color;
+}
+
+@mixin title-xl {
+    font-size: 2.5em;
+    color: $primary-color;
+}
+
+@mixin title {
+    font-size: 2em;
+    color: $primary-color;
+}
+
+@mixin paragraph-xl {
+    font-size: 1.5em;
+}
+
+@mixin paragraph {
+    font-size: 1.25em;
+}
+
+/* --- Flex --- */
+
+@mixin flex-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
