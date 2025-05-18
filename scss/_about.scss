@@ -1,0 +1,56 @@
+/* --- Variables --- */
+
+@use "variables";
+
+/* --- About Us --- */
+
+#about {
+    min-height: calc(80vh - 56px);
+    & .title {
+        @include variables.title;
+        @include variables.flex-center;
+    }
+}
+
+.about__container {
+    @include variables.flex-center;
+    min-height: 90%;
+
+    /* --- Media Queries --- */
+    @include variables.respond-to(md) {
+        flex-direction: row;
+        width: 90%;
+        margin: 0 auto;
+    }
+    @include variables.respond-to(xl) {
+        width: 70%;
+    }
+}
+
+.about__container--info {
+    width: 80%;
+    height: 100%;
+    & span,
+    li {
+        color: variables.$secundary-color;
+    }
+    & .paragraph,
+    li {
+        @include variables.paragraph;
+    }
+}
+
+.about__container--image {
+    width: 90%;
+    height: 350px;
+    margin: 20px;
+    & .image {
+        @include variables.image;
+        @include variables.shadow;
+    }
+
+    /* --- Media Queries --- */
+    @include variables.respond-to(md) {
+        height: 500px;
+    }
+}

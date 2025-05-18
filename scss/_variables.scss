@@ -12,6 +12,35 @@ $dark-color: #18230f;
 $light-color: #efefef;
 $grey-color: #e9efec;
 
+/* --- BreakPoints --- */
+
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+
+/* --- Media Queries --- */
+
+@mixin respond-to($breakpoint) {
+    @if $breakpoint == sm {
+        @media (min-width: $breakpoint-sm) {
+            @content;
+        }
+    } @else if $breakpoint == md {
+        @media (min-width: $breakpoint-md) {
+            @content;
+        }
+    } @else if $breakpoint == lg {
+        @media (min-width: $breakpoint-lg) {
+            @content;
+        }
+    } @else if $breakpoint == xl {
+        @media (min-width: $breakpoint-xl) {
+            @content;
+        }
+    }
+}
+
 /* --- Fonts --- */
 
 @mixin title-xxl {
@@ -27,6 +56,7 @@ $grey-color: #e9efec;
 @mixin title {
     font-size: 2em;
     color: $primary-color;
+    margin: 1em 0;
 }
 
 @mixin paragraph-xl {
@@ -35,6 +65,20 @@ $grey-color: #e9efec;
 
 @mixin paragraph {
     font-size: 1.25em;
+}
+
+/* --- Image --- */
+@mixin image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+/* --- Shadow --- */
+@mixin shadow {
+    box-shadow: 0 8px 12px rgba($color: #000000, $alpha: 0.3);
 }
 
 /* --- Flex --- */
