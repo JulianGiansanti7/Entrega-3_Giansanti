@@ -1,6 +1,6 @@
-=== Entrega numero 2 - Julian Giansanti ===
+=== Entrega numero 3 - Julian Giansanti ===
 
-Sitio Web de Jardineria.
+Sitio Web de Jardineria "GreenCut"
 
 Cree un sitio web estilo landing page de una empresa de jardineria ficticia, presenta secciones como: Home, About Us, Services, Gallery y Contact.
 
