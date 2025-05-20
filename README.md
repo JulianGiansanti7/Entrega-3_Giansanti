@@ -58,7 +58,3 @@ El diseño es responsive y fue desarrollado con HTML, SASS y Bootstrap.
 Todo el contenido es ficticio y fue creado con fines educativos.
 
 Los logos e imágenes se usan solo con fines ilustrativos.
-
-🌐 URL
-
-El sitio está publicado en GitHub Pages y puede ser visitado aquí:
