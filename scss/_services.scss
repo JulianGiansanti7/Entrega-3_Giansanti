@@ -5,7 +5,7 @@
 /* --- Services --- */
 
 #services {
-    height: calc(80vh - 56px);
+    min-height: 80vh;
     & .title {
         @include variables.title;
         @include variables.flex-center;
@@ -39,6 +39,7 @@
         border: 0;
         background-color: variables.$grey-color;
         @include variables.shadow;
+        transition: transform 0.3s ease;
         & .card__title,
         .card__paragraph {
             padding: 8px 4px;
@@ -48,16 +49,23 @@
             height: 200px;
             border-radius: 8px 8px 0 0;
         }
+        &:hover {
+            transform: scale(1.03);
+        }
     }
+}
 
-    /* --- Media Queries --- */
-    @include variables.respond-to(sm) {
+/* --- Media Queries --- */
+@include variables.respond-to(sm) {
+    .services__container--cards {
         & .card {
             width: 80%;
         }
     }
+}
 
-    @include variables.respond-to(md) {
+@include variables.respond-to(md) {
+    .services__container--cards {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;

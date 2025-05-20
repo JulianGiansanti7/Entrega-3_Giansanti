@@ -1,0 +1,86 @@
+/* --- Variables --- */
+
+@use "variables";
+
+/* --- Services --- */
+
+#gallery {
+    background-color: variables.$light-color;
+    min-height: 80vh;
+    padding: 3rem 1em;
+    @include variables.flex-center;
+    & .title {
+        @include variables.title;
+    }
+    & .subtitle {
+        color: variables.$secundary-color;
+        text-align: center;
+    }
+    & .paragraph {
+        @include variables.paragraph;
+        text-align: center;
+    }
+}
+
+.gallery__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    & img {
+        @include variables.image;
+        @include variables.shadow;
+        transition: transform 0.5s ease;
+
+        &:hover {
+            transform: scale(1.02);
+        }
+    }
+}
+
+/* --- Media Queries --- */
+
+@include variables.respond-to(md) {
+    .gallery__grid {
+        width: 90%;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@include variables.respond-to(lg) {
+    .gallery__grid {
+        width: 80%;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: 400px;
+        grid-template-areas:
+            "a a b"
+            "c d b"
+            "e f g"
+            "e h h";
+    }
+
+    /* --- Areas --- */
+    .img-a {
+        grid-area: a;
+    }
+    .img-b {
+        grid-area: b;
+    }
+    .img-c {
+        grid-area: c;
+    }
+    .img-d {
+        grid-area: d;
+    }
+    .img-e {
+        grid-area: e;
+    }
+    .img-f {
+        grid-area: f;
+    }
+    .img-g {
+        grid-area: g;
+    }
+    .img-h {
+        grid-area: h;
+    }
+}

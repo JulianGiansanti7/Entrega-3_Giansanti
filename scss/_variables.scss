@@ -78,7 +78,11 @@ $breakpoint-xl: 1200px;
 
 /* --- Shadow --- */
 @mixin shadow {
-    box-shadow: 0 8px 12px rgba($color: #000000, $alpha: 0.3);
+    box-shadow: 0 8px 12px rgba($color: #000, $alpha: 0.3);
+}
+
+@mixin filter {
+    filter: drop-shadow(0 0 5px rgba($color: $primary-color, $alpha: 0.5));
 }
 
 /* --- Flex --- */
