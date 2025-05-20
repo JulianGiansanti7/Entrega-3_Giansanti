@@ -1,0 +1,78 @@
+/* --- Variables --- */
+
+@use "variables";
+
+/* --- Services --- */
+
+#services {
+    min-height: 80vh;
+    & .title {
+        @include variables.title;
+        @include variables.flex-center;
+    }
+}
+
+.services__container {
+    @include variables.flex-center;
+
+    min-height: 90%;
+}
+
+.services__container--info {
+    width: 90%;
+    height: 100%;
+    text-align: center;
+    & .subtitle {
+        color: variables.$secundary-color;
+    }
+    & .paragraph {
+        @include variables.paragraph;
+    }
+}
+
+.services__container--cards {
+    width: 90%;
+
+    & .card {
+        width: 90%;
+        margin: 20px auto;
+        border: 0;
+        background-color: variables.$grey-color;
+        @include variables.shadow;
+        transition: transform 0.3s ease;
+        & .card__title,
+        .card__paragraph {
+            padding: 8px 4px;
+        }
+        & .image {
+            @include variables.image;
+            height: 200px;
+            border-radius: 8px 8px 0 0;
+        }
+        &:hover {
+            transform: scale(1.03);
+        }
+    }
+}
+
+/* --- Media Queries --- */
+@include variables.respond-to(sm) {
+    .services__container--cards {
+        & .card {
+            width: 80%;
+        }
+    }
+}
+
+@include variables.respond-to(md) {
+    .services__container--cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 40px;
+
+        & .card {
+            width: 300px;
+        }
+    }
+}

@@ -1,0 +1,69 @@
+/* --- Variables --- */
+
+@use "variables";
+
+/* --- Home --- */
+
+#home {
+    height: calc(90vh - 56px);
+    position: relative;
+    overflow: hidden;
+}
+
+.home__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    & img {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+    }
+    & .opacity {
+        height: 100%;
+        width: 100%;
+        background-color: rgba($color: #000, $alpha: 0.5);
+        position: absolute;
+        top: 0;
+    }
+}
+
+.home__container--info {
+    height: 100%;
+    @include variables.flex-center;
+    color: variables.$light-color;
+    & .paragraph {
+        @include variables.paragraph;
+        width: 80%;
+        text-align: center;
+    }
+    & .title {
+        @include variables.title-xl;
+    }
+}
+
+.home__socials {
+    display: flex;
+    & a i {
+        @include variables.paragraph-xl;
+    }
+    & a {
+        text-decoration: none;
+        background-color: variables.$light-color;
+        color: variables.$secundary-color;
+        padding: 8px 12px;
+        border-radius: 0 16px 16px 0;
+        &:hover {
+            background-color: variables.$secundary-color;
+            color: variables.$grey-color;
+            transition: 0.2s;
+        }
+        &:first-child {
+            border-radius: 16px 0 0 16px;
+            border-right: 2px solid variables.$secundary-color;
+        }
+    }
+}

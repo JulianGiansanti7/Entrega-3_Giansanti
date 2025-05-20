@@ -1,0 +1,17 @@
+/* --- Variables --- */
+
+@use "variables";
+
+/* --- Footer --- */
+
+#footer {
+    background-color: variables.$secundary-color;
+    padding: 20px 0;
+    width: 100%;
+    height: 80px;
+    & .paragraph {
+        @include variables.paragraph;
+        color: variables.$light-color;
+        text-align: center;
+    }
+}

@@ -1,0 +1,63 @@
+/* --- Variables --- */
+
+@use "variables";
+
+/* --- About Us --- */
+
+#about {
+    min-height: 80vh;
+    & .title {
+        @include variables.title;
+        @include variables.flex-center;
+    }
+}
+
+.about__container {
+    @include variables.flex-center;
+    min-height: 90%;
+}
+
+.about__container--info {
+    width: 80%;
+    height: 100%;
+    & span,
+    li {
+        color: variables.$secundary-color;
+    }
+    & .paragraph,
+    li {
+        @include variables.paragraph;
+    }
+}
+
+.about__container--image {
+    width: 90%;
+    height: 350px;
+    margin: 20px;
+    & .image {
+        @include variables.image;
+        @include variables.shadow;
+        transition: transform 0.3s ease;
+        &:hover {
+            transform: scale(1.03);
+        }
+    }
+}
+
+/* --- Media Queries --- */
+@include variables.respond-to(md) {
+    .about__container {
+        flex-direction: row;
+        width: 90%;
+        margin: 0 auto;
+    }
+    .about__container--image {
+        height: 500px;
+    }
+}
+
+@include variables.respond-to(xl) {
+    .about__container {
+        width: 70%;
+    }
+}
