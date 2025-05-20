@@ -6,6 +6,7 @@
 
 #contact {
     min-height: 80vh;
+    padding: 3rem 1rem;
     @include variables.flex-center;
     & .title {
         @include variables.title;
@@ -28,8 +29,7 @@
 
 .contact__container--form {
     & .form {
-        margin: 12px;
-        padding: 12px;
+        padding: 16px;
         border-radius: 4px;
         background-color: variables.$grey-color;
         display: flex;

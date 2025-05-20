@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
 }
 
 /* --- Colors --- */
@@ -237,7 +238,7 @@
   }
 }
 /* --- Variables --- */
-/* --- Services --- */
+/* --- Gallery --- */
 #gallery {
   background-color: #efefef;
   min-height: 80vh;
@@ -324,6 +325,7 @@
 /* --- Contact --- */
 #contact {
   min-height: 80vh;
+  padding: 3rem 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -351,8 +353,7 @@
 }
 
 .contact__container--form .form {
-  margin: 12px;
-  padding: 12px;
+  padding: 16px;
   border-radius: 4px;
   background-color: #e9efec;
   display: flex;
@@ -488,6 +489,20 @@
   background-size: 50px 100%;
   background-image: linear-gradient(135deg, #efefef 25%, transparent 25%), linear-gradient(225deg, #efefef 25%, transparent 25%);
   background-position: 0 0;
+}
+
+/* --- Variables --- */
+/* --- Footer --- */
+#footer {
+  background-color: #255f38;
+  padding: 20px 0;
+  width: 100%;
+  height: 80px;
+}
+#footer .paragraph {
+  font-size: 1.25em;
+  color: #efefef;
+  text-align: center;
 }
 
 /*# sourceMappingURL=styles.css.map */
